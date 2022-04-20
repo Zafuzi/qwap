@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hot update page</title>
+    <link rel="stylesheet" href="style.css" rel="external nofollow" />
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello <span class="name"></span></h1>
+    <p>Text</p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+    <p></p>
+    <script src="./socket.io.min.js"></script>
+    <script src="./index.js" type="module"></script>
+    <script type="module">
+      import obj from "./index.js";
+      console.log(obj)
+      io.connect("http://localhost:8086/").on("reload", () =>
+        window.location.reload()
+      );
+      document.querySelector(".name").innerHTML = obj.name;
+    </script>
+  </body>
+</html>

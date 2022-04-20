@@ -1,0 +1,10 @@
+{
+    "appId": "com.zafuzi.qwap",
+    "appName": "qwap",
+    "webDir": "www",
+    "bundledWebRuntime": false,
+    "server": {
+        "url": "https://squids.sleepless.com",
+        "cleartext": true
+    }
+}
